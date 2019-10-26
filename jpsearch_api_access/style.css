@@ -1,6 +1,10 @@
 /* style.css */
 body {
 	margin: 50px;
+	text-align: center;
+}
+tr {
+	border: 1px;
 }
 img {
 	width: 100px;
