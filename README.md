@@ -1,1 +1,1 @@
-!(yuukitoriyama.github.io)[https://yuukitoriyama.github.io]
+[yuukitoriyama.github.io](https://yuukitoriyama.github.io)
