@@ -5,6 +5,15 @@
 		<title>GeolocationAPI | Sample Page</title>
 	</head>
 	<script type="text/javascript">
+		async function locateCurrentPosition() {
+		        await navigator.geolocation.getCurrentPosition(position => {
+                		const lat = position.coords.latitude;
+	                	const lng = position.coords.longitude;
+	        	}); 
+		        return [lat, lng]
+		}
+
+
 		function locate() {
 			navigator.geolocation.getCurrentPosition(position => {
 				result.innerHTML = `latitude: ${position.coords.latitude}
