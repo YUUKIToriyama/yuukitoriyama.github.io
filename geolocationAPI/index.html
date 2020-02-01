@@ -10,16 +10,10 @@
                 		const lat = position.coords.latitude;
 	                	const lng = position.coords.longitude;
 	        	}); 
-		        return [lat, lng]
+			result.innerHTML = `latitude: ${lat}
+			longitude: ${lng}`;
 		}
 
-
-		function locate() {
-			navigator.geolocation.getCurrentPosition(position => {
-				result.innerHTML = `latitude: ${position.coords.latitude}
-				longitude: ${position.coords.longitude}`;
-			});
-		}
 		window.onload = () => {
 			let result = document.getElementById("result");
 			if ("geolocation" in navigator) {
