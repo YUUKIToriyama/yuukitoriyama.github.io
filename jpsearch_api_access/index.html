@@ -5,17 +5,12 @@
 	<title>検索ページ</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="apiAccess.js"></script>
-	<script type="text/javascript">
-		function Submit() {
-			apiAccess(form_1.textbox.value);
-		}
-	</script>
 </head>
 <body>
 	<h1>Japan SearchからJSONデータを取得する</h1>
-	<form name="form_1" action="index.html">
-		<input type="text" name="textbox">
-		<input type="button" value="実行" onclick="Submit()">
+	<form>
+		<input type="text" name="textbox" id="textbox">
+		<input type="button" value="実行" onclick="apiAccess()">
 	</form>
 	<div id="result">
 
