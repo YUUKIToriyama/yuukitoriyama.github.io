@@ -7,7 +7,8 @@
 	<script type="text/javascript">
 		function locate() {
 			navigator.geolocation.getCurrentPosition(position => {
-				result.innerHTML = position.coords;
+				result.innerHTML = `latitude: ${position.coords.latitude}
+				longitude: ${position.coords.longitude}`;
 			});
 		}
 		window.onload = () => {
