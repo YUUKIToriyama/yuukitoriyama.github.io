@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>GeolocationAPI | Sample Page</title>
+	</head>
+	<script type="text/javascript">
+		function locate() {
+			navigator.geolocation.getCurrentPosition(position => {
+				result.innerHTML = position.coords;
+			});
+		}
+		window.onload = () => {
+			let result = document.getElementById("result");
+			if ("geolocation" in navigator) {
+				result.innerHTML = "Geolocation API is enable on this Device(this Browser)";
+			} else {
+				result.innerHTML = "Geolocation API is unable on this Device(this Browser)";	
+			}
+		}
+	</script>
+	<body>
+		<input type="button" onClick="locate()">
+		<textarea id="result"></textarea>
+	</body>
+</html>
