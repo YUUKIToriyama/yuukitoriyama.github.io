@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Notepad</title>
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+		<link href="./style.css" rel="stylesheet">
+		<style type="text/css">
+			textarea {
+				width: 100%;
+				height: 100%;
+				resize: none;
+			}
+			.note {
+				border-bottom: 3px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>簡易メモ</h1>
+				<p>localStrage.clear()をしない限り使えます</p>
+			</header>
+			<div class="popup" id="popup">
+				<div class="popupInner">
+					<div class="closeBtn" id="closeBtn"><i class="fas fa-times"></i></div>
+					<div>
+						<textarea name="textArea" id="textArea"></textarea>
+					</div>
+				</div>
+				<div class="background" id="background"></div>
+			</div>
+			<input type="button" name="createNew" id="createNew" value="+">
+			<div class="note">
+				トンネルを抜けるとそこは雪国だった。夜の底が白くなった。
+			</div>
+			<footer>
+				<small>&copy;Copyright 2020 YUUKIToriyama All Rights Reserved.</small>
+			</footer>
+
+		</main>
+		
+	</body>
+		<script type="text/javascript">
+		var noteId = localStorage.length;
+		window.onload = () => {
+			for (let i = 1; i <= noteId; i++) {
+				let newNote = document.createElement("div");
+				newNote.setAttribute("class", "note");
+				newNote.innerHTML =  `<p>${localStorage[i]}</p>`;
+				main.appendChild(newNote);
+			}
+		}
+		const main = document.querySelector("main");
+		const createNew = document.getElementById("createNew");
+		const popup = document.getElementById("popup");
+		createNew.addEventListener("click", () => {
+			popup.classList.toggle("is-show");
+			noteId = localStorage.length + 1;
+		});
+		const textArea = document.getElementById("textArea");
+		textArea.addEventListener("change", () => {
+			window.localStorage.setItem(noteId, textArea.value);
+		});
+		const closeBtn = document.getElementById("closeBtn");
+		closeBtn.addEventListener("click", () => {
+			popup.classList.toggle("is-show");
+			textArea.value = "";
+				
+			let newNote = document.createElement("div");
+			newNote.setAttribute("class", "note");
+			newNote.innerHTML =  `<p>${localStorage[noteId]}</p>`;
+			main.appendChild(newNote);
+		});
+		
+		</script>
+</html>
