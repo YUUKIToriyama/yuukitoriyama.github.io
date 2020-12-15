@@ -1,0 +1,2 @@
+(this["webpackJsonpyuukitoriyama.github.io"]=this["webpackJsonpyuukitoriyama.github.io"]||[]).push([[0],{4:function(e,i,t){"use strict";t.r(i);var u=t(0),c=(t(2),t(3)),n=function(){return Object(u.jsxs)("div",{children:[Object(u.jsx)("h1",{children:"Hello, world!"}),Object(u.jsx)("p",{children:"I am Yuuki Toriyama. Nice to meet you"})]})};t.n(c).a.render(Object(u.jsx)(n,{}),document.getElementById("app"))}},[[4,1,2]]]);
+//# sourceMappingURL=main.e151fa65.chunk.js.map
