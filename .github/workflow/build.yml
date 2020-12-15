@@ -6,8 +6,7 @@ name: Build My React App and Release GitHub Page
 on:
   push:
     branches:
-      #- master
-      - renew
+      - master
 
 # ジョブの定義
 jobs:
