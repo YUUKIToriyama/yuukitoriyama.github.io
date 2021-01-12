@@ -8,13 +8,13 @@ const App = () => {
 	return (
 		<div>
 			<h1>Hello, world!</h1>
-			<p>I am Yuuki Toriyama. Nice to meet you</p>
+			<p>This is Kenmou-men's megalomania.</p>
 			<MyTimeline />
 		</div>
 	);
 };
 
 ReactDOM.render(
-	<App/>,
+	<App />,
 	document.getElementById("app")
 )
